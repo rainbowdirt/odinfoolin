@@ -1,0 +1,186 @@
+MAKE TWO SCREEN ON XUBUNTU:
+when WINDOW MODE on 2nd screen say "enable"
+_______________________________________________________
+ctrl+alt+T = open terminal
+_______________________________________________________
+TERMINOLOGY
+
+compiler - thing that converts code to thing ur comp can run?
+CLI - command line interface (the black screen u type the code into)
+Directories - folders
+Recursively - one after the other?
+Version Control System (VCS) - a kind of software that helps the developer team to track all the changes that have been made to the source code + tells who made what changes to each thing (Git is a version control system)
+GitHub - place to upload your code using Git and manage the code in its web interface (they are not the same thing or even the same company tho)
+SSH Key - a cryptographically secure identifier, it's like a really long password used to identify your machine (GitHub uses them so you don't have to type in your username/pw every time you upload to your repository)
+Version Control - shows all the changes you made to a file over time, saves each version every time you save, so you can go back to an old one if you want! :0
+RCS - revision control system
+CVCS - centralized version control system
+DVCS - distributed version control system (what Git is!), each version being worked on is like a backup of the main one and can restore the whole system, neato!
+SVG image files - vector-based graphics that will scale with responsive designs! Good idea for resize-y things!
+
+
+_______________________________________________________
+_______________________________________________________
+CSS MUMBO JUMBO!!!
+
+* {code here}
+Asterik'd stuff defines what happens universally- like the body one, I guess? Did not know!
+
+~difference between div class and div id = classes don't need to be unqiue, so you can stack multiple classes together. So you can have like:
+.ay {color:blue}
+.bee {size:15px}
+<div class=ay bee>now this text will be blue and 15px because it applied both classes. Separate each class in the thingum by spaces</div>
+
+~I think I always used IDs, but this thing says to use them sparingly because you can only use them once? Idk. Whatevs!
+#chees {background-color:orange; color:yellow}
+<div id=chees>Good luck reading this text, lol</di>
+
+~~
+actual box size = height/width + padding (top+bottom) + border (top+bottom)
+use margins! They're neat. They don't go into each other.
+
+"box-sizing: border-box;" makes the height/width the ACTUAL size
+
+border-top/right/bottom/left-width/style/color
+
+padding/margin-top/right/bottom/left
+
+code be like = .box {margin 0 2px 2px 0;} where it's top/right/bottom/left
+(the example used "em" instead of "px" idk if that's important)
+
+! if three values are set, it'll assume top/right+left/bottom
+!if two values are set, it'll assume top+bottom/right+left
+
+! the above can have negative values, too! And "auto"
+
+.box {width:100px; margin: 0 auto;}
+If you specify the width, then set the left/right margins to auto, it makes horizontal centering, or something. idk. It doesn't work vertically
+
+!vertical margins collapse into each other instead of being additive
+~~~
+
+display: block stuff all stacks on top of each other
+inline elements are... within the lines! They can be all up on each other. So block lines are like Lee because they don't want to be touched, and inline elements are like Corey because they want to snuggle up
+
+<span> can be put around a single word in a paragraph/div to select/edit just that one word (inline elements)
+span {you can use the css to style the span!}
+
+display: flexbox
+it can make shit go side-by-side and it's pretty cool! The default settings of flexbox make columns equal-sized and the same height, I guess? 
+
+display: inline-flex
+idk
+
+default flex direction is row (making err'thing side by side). You can set it to
+flex-direction: column;
+to make it up and down again, tho that's how usual code is anyway. 
+
+flex-wrap: wrap;
+flex: 200px; 
+
+COMBINE INTO:
+flex-flow: row wrap;
+
+display: flex; align-items: center; justify-content: space-around;
+
+_______________________________________________________
+_______________________________________________________
+COMMAND LINE.... COMMANDS!!!
+
+ls = show files and folders in the current directory (LiSt)
+
+ls [path to other directory here] = list files in that location
+
+ls -a = show both visible and hidden files in that directory
+
+ls -l = long form listing, gives more details on the files (file mode, number of links, owner name, group name, number of bytes in that file, abbreviated month, day-of-month file was last modified, minute file was last modified, and path name
+
+ls -h = add to -l to replace bytes with kb, mb, ect
+-S = add to sort by file size
+-t = add to sort by latest modified date (time)
+-r = add to sort in REVERSE order
+
+touch [FILE NAME HERE] = create [FILE NAME HERE] in current directory
+^ u can create more than one file at a time, just list them all with one SPACE inbetween them
+
+pwd = tells you where you're at right now (present working directory)
+
+ln [FILE ONE] [FILE TWO] = hard-links file one to file two (like a shortcut on a desktop?)
+
+CTRL+SHIFT+C / CTRL+SHIFT+V = copy/paste into COMMAND LINE
+
+tab button = auto-fills in what it thinks you're typing
+
+cd = change directory (ex: "cd /" goes to root, "cd "or "cd~" goes to home, "cd -" goes BACK one (previous), "cd .." goes UP one level, "cd [type full directory here ie: cd ~/Desktop]" to go to that directory
+
+cp = make a copy of something (ex: "cp flib dis" makes an exact copy of FLIB and the new copy is named DIS)
+
+cp -r directory flib = copy the ENTIRE DIRECTORY named "flib"
+
+mv = move or rename a file (ex: "mv yay beep" renames YAY to BEEP), (ex: "mv flib ~/Desktop" moves FLIB to your desktop directory)
+
+rm = delete file (ReMove)
+
+rmdir = deletes an empty directory
+
+rm -r = deletes a directory and all of its contents
+
+mkdir = create a directory MaKe DIRectory (ex: "mkdir beans" makes a folder [aka directory] called beans)
+
+sudo = add to the FRONT of a command to add administrative authority to your command (like, if it won't let you normally do that)
+*** CAN BE DANGEROPUS, BE CAREFOO!!!
+
+code = open all of the files in the directory you're in in VScode
+
+code [folder name here] = open all the files in that folder in VScode_
+
+git clone <paste the SSH here> = moves that repository onto your local machine
+
+git --version = check ur version
+
+git clone [url thing from website here] = connect it to your thing
+
+git status = status
+
+git add FILENAMEHERE = adds FILENAMEHERE to the staging area (red text)
+
+git add . = adds all the files in the current directory
+
+git add -A = adds all unstaged files to the staging area
+
+git commit -m "<notes here>" = commit aka save that file
+
+git rm <filename> = remove file
+
+git log = see all the changes made
+
+git push origin main = puts stuff from local machine to github
+
+
+_______________________________________________________
+COMMAND LINE-RELATED NOTES
+1) Home Directory is /home/<username> on Ubuntu or /Users/<username> on Mac
+- opening up terminal automatically starts in the home directory
+_______________________________________________________
+
+
+
+_______________________________________________________
+_______________________________________________________
+VSCode ------------------------
+
+type ! on the first line then enter to auto-set up a boilerplate
+
+type f1 for search
+
+type extensions to try to find extensions to instal
+
+type keyboard shortcuts to import them from other things or w/e
+
+or check out VScode's keyboard shortcut to see what they actually are in this program
+
+interactive playground???
+_______________________________________________________
+
+
+
